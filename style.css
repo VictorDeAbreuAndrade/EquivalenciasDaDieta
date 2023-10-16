@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "Ink Free";
+    src: url("https://db.onlinewebfonts.com/t/0801c08e5412f54e4b4e9ad146d83a12.eot");
+    src: url("https://db.onlinewebfonts.com/t/0801c08e5412f54e4b4e9ad146d83a12.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/0801c08e5412f54e4b4e9ad146d83a12.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/0801c08e5412f54e4b4e9ad146d83a12.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/0801c08e5412f54e4b4e9ad146d83a12.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/0801c08e5412f54e4b4e9ad146d83a12.svg#Ink Free")format("svg");
+}
+
+body {
+    margin: 0;
+    font-family: "Ink Free", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    font-size: 4vw;
+    background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url("background.jpg");
+    background-size: 100vh;
+    background-position-y: top;
+    background-position-x: right;
+}
+
+div {
+    padding: 2vw;
+    text-shadow: 0.5vw 0.5vw 2vw #444444;
+}
+
+#titulo {
+    font-size: 9vw;
+    padding: 3vw;
+    text-align: center;
+    text-shadow: 0.5vw 0.5vw 2vw;
+}
+
+select, option, input, button {
+    font-family: "Ink Free", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4vw;
+    font-weight: bolder;
+    box-shadow: 0.5vw 0.5vw 2vw gray;
+
+}
+
+input {
+    max-width: 12vw;
+    text-align: right;
+    border-width: 0;
+}
+
+#botaoAdicionar {
+    background-color: #88ff88;
+    position: absolute;
+    right: 2%;
+}
+
+#botaoAdicionar:active, #botaoResultado:active {
+    background-color: #ff8888;
+}
+
+#alimentosSelecionados {
+    border: 1px solid;
+    margin: 2vw;
+    padding: 2vw;
+    padding-left: 5vw;
+    background-color: rgba(255,255,255,0.7);
+    font-size: 3.5vw;
+    box-shadow: 0.5vw 0.5vw 2vw gray;
+}
+
+#equivale {
+    font-size: 5vw;
+    text-align: center;
+}
+
+#qtdeResultante {
+    margin-left: 8vw;
+    font-size: 15vw;
+    text-shadow: 0.5vw 0.5vw 2vw #444444;
+}
+
+#alimentosSaida {
+    position: absolute;
+    right: 2%;
+    margin-top: 7%;
+}

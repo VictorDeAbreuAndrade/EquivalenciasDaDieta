@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Equivalências da Dieta</title>
+</head>
+<body>
+    <div id="titulo">Equivalências da Dieta</div>
+    <div>Selecione o alimento você tem disponível e a quantidade:<br><br>
+    <select name="alimentosEntrada" id="alimentosEntrada">
+        <option selected disabled>Escolha um alimento</option>
+        <option value="Cuscuz">Cuscuz</option>
+        <option value="Pão">Pão</option>
+        <option value="Arroz">Arroz</option>
+        <option value="Feijão">Feijão</option>
+        <option value="Macarrão">Macarrão</option>
+        <option value="Banana">Banana</option>
+        <option value="Whey Protein">Whey Protein</option>
+    </select>
+    <input type="number" name="qtde" id="qtde"> gramas
+    <button id="botaoAdicionar" onclick="adicionaAlimento()">Adicionar</button>
+</div>
+<ul id="alimentosSelecionados">Os alimentos adicionados aparecerão aqui...</ul>
+<div id="equivale">Equivale(m) a...</div>
+<span id="qtdeResultante"></span>
+<select name="alimentosSaida" id="alimentosSaida" onchange="alimentoSelecionado()">
+        <option selected disabled>Escolha um alimento</option>
+        <option value="Cuscuz">Cuscuz</option>
+        <option value="Feijão">Feijão</option>
+        <option value="Purê de Batata">Purê de Batata</option>
+        <option value="Tapioca">Tapioca</option>
+        <option value="Leite Líquido">Leite Líquido</option>
+        <option value="Leite Em Pó">Leite Em Pó</option>
+        <option value="Cappuccino">Cappuccino</option>
+    </select>
+
+</body>
+</html>
