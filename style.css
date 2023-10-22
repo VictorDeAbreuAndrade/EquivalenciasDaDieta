@@ -26,10 +26,14 @@ div {
 }
 
 #titulo {
-    font-size: 9vw;
+    font-size: 248%;
     padding: 3vw;
     text-align: center;
     text-shadow: 0.5vw 0.5vw 2vw;
+}
+
+#subtitulo {
+    font-size: 103%;
 }
 
 select, option, input, button {

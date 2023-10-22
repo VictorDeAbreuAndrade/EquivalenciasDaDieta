@@ -19,11 +19,10 @@ const catalogoAlimentos = {
     }
 }
 
-console.log(catalogoAlimentos.getKeyFromValue('40g de Leite Em Pó'))
-
 function alimentoSelecionado () {
-    let listaAlimentosAdicionados = document.getElementById('alimentosSelecionados').innerText
-    listaAlimentosAdicionados = listaAlimentosAdicionados.split('\n')
+    let listaAlimentosAdicionados = document.getElementById('alimentosSelecionados').textContent.replace('Alimentos Adicionados:', '')
+    listaAlimentosAdicionados = listaAlimentosAdicionados.split(' edit delete')
+    listaAlimentosAdicionados = listaAlimentosAdicionados.filter(n => n)
     let alimentoSelecionado = document.getElementById('alimentosSaida')
     let qtdeResultante = document.getElementById('qtdeResultante')
     let quantidadeTotalCalorias = 0
@@ -45,7 +44,8 @@ function alimentoSelecionado () {
         else if (alimento[0] == 'Whey Protein') {quantidadeTotalCalorias += alimento[1] * quantidadeAlimento}
     }
 
-    if (alimentoSelecionado.value == 'Cappuccino') {quantidadeAlimentoSelecionado = String(Math.round(quantidadeTotalCalorias/catalogoAlimentos.cappuccino[1])) + 'g'}
+    if (alimentoSelecionado.value == 'Arroz') {quantidadeAlimentoSelecionado = String(Math.round(quantidadeTotalCalorias/catalogoAlimentos.arroz[1])) + 'g'}
+    else if (alimentoSelecionado.value == 'Cappuccino') {quantidadeAlimentoSelecionado = String(Math.round(quantidadeTotalCalorias/catalogoAlimentos.cappuccino[1])) + 'g'}
     else if (alimentoSelecionado.value == 'Cuscuz') {quantidadeAlimentoSelecionado = String(Math.round(quantidadeTotalCalorias/catalogoAlimentos.cuscuz[1])) + 'g'}
     else if (alimentoSelecionado.value == 'Feijão') {quantidadeAlimentoSelecionado = String(Math.round(quantidadeTotalCalorias/catalogoAlimentos.feijao[1])) + 'g'}
     else if (alimentoSelecionado.value == 'Leite Líquido') {quantidadeAlimentoSelecionado = String(Math.round(quantidadeTotalCalorias/catalogoAlimentos.leiteLiquido[1])) + 'ml'}
@@ -54,7 +54,7 @@ function alimentoSelecionado () {
     else if (alimentoSelecionado.value == 'Purê de Batata') {quantidadeAlimentoSelecionado = String(Math.round(quantidadeTotalCalorias/catalogoAlimentos.pureDeBatata[1])) + 'g'}
     else if (alimentoSelecionado.value == 'Tapioca') {quantidadeAlimentoSelecionado = String(Math.round(quantidadeTotalCalorias/catalogoAlimentos.tapioca[1])) + 'g'}
 
-    qtdeResultante.innerText = quantidadeAlimentoSelecionado
+    qtdeResultante.textContent = quantidadeAlimentoSelecionado
 
 }
 
@@ -83,8 +83,6 @@ function editaAlimento (item) {
     tipoAlimento.value = itemEditar.innerText.split(' ')[2]
 
     itemEditar.remove()
-    
-    
 }
 
 function excluiAlimento (item) {
