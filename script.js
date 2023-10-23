@@ -4,6 +4,7 @@ const catalogoAlimentos = {
     cappuccino: ['Cappuccino', 4.35],
     cuscuz: ['Cuscuz', 1.12],
     feijao: ['Feijão', 0.76],
+    laranjaSuco: ['Laranja (Suco)', 0.42],
     leiteEmPo: ['Leite Em Pó', 4.88],
     leiteLiquido: ['Leite Líquido', 0.60],
     maca: ['Maçã', 0.52],
@@ -48,6 +49,7 @@ function alimentoSelecionado () {
     else if (alimentoSelecionado.value == 'Cappuccino') {quantidadeAlimentoSelecionado = String(Math.round(quantidadeTotalCalorias/catalogoAlimentos.cappuccino[1])) + 'g'}
     else if (alimentoSelecionado.value == 'Cuscuz') {quantidadeAlimentoSelecionado = String(Math.round(quantidadeTotalCalorias/catalogoAlimentos.cuscuz[1])) + 'g'}
     else if (alimentoSelecionado.value == 'Feijão') {quantidadeAlimentoSelecionado = String(Math.round(quantidadeTotalCalorias/catalogoAlimentos.feijao[1])) + 'g'}
+    else if (alimentoSelecionado.value == 'Laranja (Suco)') {quantidadeAlimentoSelecionado = String(Math.round(quantidadeTotalCalorias/catalogoAlimentos.feijao[1])) + 'ml'}
     else if (alimentoSelecionado.value == 'Leite Líquido') {quantidadeAlimentoSelecionado = String(Math.round(quantidadeTotalCalorias/catalogoAlimentos.leiteLiquido[1])) + 'ml'}
     else if (alimentoSelecionado.value == 'Leite Em Pó') {quantidadeAlimentoSelecionado = String(Math.round(quantidadeTotalCalorias/catalogoAlimentos.leiteEmPo[1])) + 'g'}
     else if (alimentoSelecionado.value == 'Maçã') {quantidadeAlimentoSelecionado = String(Math.round(quantidadeTotalCalorias/catalogoAlimentos.maca[1])) + 'g'}
