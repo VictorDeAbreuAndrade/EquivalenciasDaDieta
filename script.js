@@ -80,10 +80,10 @@ function editaAlimento (item) {
     let itemEditar = document.getElementById(item + ' Editar').parentElement
     let tipoAlimento = document.getElementById('alimentosEntrada')
     let qtdeAlimentoEntrada = document.getElementById('qtde')
-    
-    qtdeAlimentoEntrada.value = itemEditar.innerText.split(' ')[0].replace('g', '')
-    tipoAlimento.value = itemEditar.innerText.split(' ')[2]
+    let alimento = catalogoAlimentos[catalogoAlimentos.getKeyFromValue(itemEditar.textContent)]
 
+    qtdeAlimentoEntrada.value = Number(itemEditar.textContent.split(' ')[0].replace('g', ''))
+    tipoAlimento.value = alimento[0]
     itemEditar.remove()
 }
 
